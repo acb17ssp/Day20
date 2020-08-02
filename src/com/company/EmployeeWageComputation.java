@@ -10,10 +10,9 @@ public class EmployeeWageComputation {
     public static final int NUMBER_OF_WORKING_HOURS = 10;
 
     /**
-     * This is a static method used to calculate the salary of the employee
-     * @return totalWage - it is the salary of the employee for the total days/hours
+     * This is a void method used to calculate the salary of the employee
      */
-    public static int computeWages(){
+    public static void computeWages(){
 
         // Variables
         int empHours = 0;
@@ -49,7 +48,6 @@ public class EmployeeWageComputation {
             totalWage+=salary;
         }
         System.out.println("Total salary: " + totalWage);
-        return totalWage;
     }
 
     /**

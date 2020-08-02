@@ -9,8 +9,11 @@ public class EmployeeWageComputation {
     public static final int NUMBER_OF_WORKING_DAYS = 5;
     public static final int NUMBER_OF_WORKING_HOURS = 10;
 
-    public static void main(String[] args) {
-        System.out.println("Welcome Employee" + "\n");
+    /**
+     * This is a static method used to calculate the salary of the employee
+     * @return totalWage - it is the salary of the employee for the total days/hours
+     */
+    public static int computeWages(){
 
         // Variables
         int empHours = 0;
@@ -19,6 +22,7 @@ public class EmployeeWageComputation {
         int totalHrs = 0;
         int totalDays = 0;
 
+        // loop condition to check if the total days are matching number of working days/hours and eventually calculate salary
         while (totalDays <= NUMBER_OF_WORKING_DAYS || totalHrs <= NUMBER_OF_WORKING_HOURS){
 
             totalDays++;
@@ -45,5 +49,15 @@ public class EmployeeWageComputation {
             totalWage+=salary;
         }
         System.out.println("Total salary: " + totalWage);
+        return totalWage;
+    }
+
+    /**
+     * The main method only calls the computeWages method declared above
+     * @param args - main method
+     */
+    public static void main(String[] args) {
+        System.out.println("Welcome Employee" + "\n");
+        computeWages();
     }
 }
